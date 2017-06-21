@@ -211,6 +211,7 @@
 				TargetAttributes = {
 					469954EE1EF93BB5008440A4 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NY45473NT8;
 						ProvisioningStyle = Automatic;
 					};
 					469955021EF93BB5008440A4 = {
@@ -438,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = InfiniteScrollCV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.InfiniteScrollCV;
@@ -450,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = InfiniteScrollCV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.InfiniteScrollCV;
