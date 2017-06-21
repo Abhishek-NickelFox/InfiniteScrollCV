@@ -12,6 +12,9 @@ class CardSwipeViewController: TisprCardStackViewController, TisprCardStackViewC
 
     fileprivate var countOfCards: Int = 6
     
+    let colors: [UIColor] = [.red, .yellow, .blue, .lightGray, .green, .cyan]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +49,8 @@ class CardSwipeViewController: TisprCardStackViewController, TisprCardStackViewC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SwipeCollectionViewCell", for: indexPath as IndexPath) as! SwipeCollectionViewCell
         
         cell.title.text = "Card - \(indexPath.item)"
+        cell.voteSmile.backgroundColor = colors[indexPath.item]
+        
         
         return cell
     }

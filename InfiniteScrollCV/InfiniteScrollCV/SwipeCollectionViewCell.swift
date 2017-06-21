@@ -24,31 +24,31 @@ class SwipeCollectionViewCell: TisprCardStackViewCell {
     
     override var center: CGPoint {
         didSet {
-            updateSmileVote()
+//            updateSmileVote()
         }
     }
     
     override internal func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
-        updateSmileVote()
+//        updateSmileVote()
     }
     
-    func updateSmileVote() {
-        let rotation = atan2(transform.b, transform.a) * 100
-        
-        var color = UIColor.red
-        
-        if rotation > 15 {
-            color = .green
-        } else if rotation > 0 {
-            color = .blue
-        } else if rotation < -15 {
-            color = .yellow
-        } else if rotation < 0 {
-            color = .red
-        }
-
-        voteSmile.backgroundColor = color
-    }
+//    func updateSmileVote() {
+//        let rotation = atan2(transform.b, transform.a) * 100
+//        
+//        var color = UIColor.red
+//        
+//        if rotation > 15 {
+//            color = .green
+//        } else if rotation > 0 {
+//            color = .blue
+//        } else if rotation < -15 {
+//            color = .yellow
+//        } else if rotation < 0 {
+//            color = .red
+//        }
+//
+//        voteSmile.backgroundColor = color
+//    }
     
 }
