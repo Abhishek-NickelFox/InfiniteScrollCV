@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4646C4FA1EFA5301001DA37E /* TisprCardStackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646C4F71EFA5301001DA37E /* TisprCardStackViewCell.swift */; };
+		4646C4FB1EFA5301001DA37E /* TisprCardStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646C4F81EFA5301001DA37E /* TisprCardStackViewController.swift */; };
+		4646C4FC1EFA5301001DA37E /* TisprCardStackViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646C4F91EFA5301001DA37E /* TisprCardStackViewLayout.swift */; };
+		4646C4FE1EFA532B001DA37E /* CardSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646C4FD1EFA532B001DA37E /* CardSwipeViewController.swift */; };
+		4646C5001EFA53E2001DA37E /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4646C4FF1EFA53E2001DA37E /* SwipeCollectionViewCell.swift */; };
 		469954F31EF93BB5008440A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469954F21EF93BB5008440A4 /* AppDelegate.swift */; };
 		469954F51EF93BB5008440A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469954F41EF93BB5008440A4 /* ViewController.swift */; };
 		469954F81EF93BB5008440A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469954F61EF93BB5008440A4 /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4646C4F71EFA5301001DA37E /* TisprCardStackViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TisprCardStackViewCell.swift; sourceTree = "<group>"; };
+		4646C4F81EFA5301001DA37E /* TisprCardStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TisprCardStackViewController.swift; sourceTree = "<group>"; };
+		4646C4F91EFA5301001DA37E /* TisprCardStackViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TisprCardStackViewLayout.swift; sourceTree = "<group>"; };
+		4646C4FD1EFA532B001DA37E /* CardSwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSwipeViewController.swift; sourceTree = "<group>"; };
+		4646C4FF1EFA53E2001DA37E /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		469954EF1EF93BB5008440A4 /* InfiniteScrollCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrollCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469954F21EF93BB5008440A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469954F41EF93BB5008440A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,13 +109,18 @@
 		469954F11EF93BB5008440A4 /* InfiniteScrollCV */ = {
 			isa = PBXGroup;
 			children = (
+				4646C4F71EFA5301001DA37E /* TisprCardStackViewCell.swift */,
+				4646C4F81EFA5301001DA37E /* TisprCardStackViewController.swift */,
+				4646C4F91EFA5301001DA37E /* TisprCardStackViewLayout.swift */,
 				469954F21EF93BB5008440A4 /* AppDelegate.swift */,
 				469954F41EF93BB5008440A4 /* ViewController.swift */,
+				469955201EF93CB3008440A4 /* IFCollectionViewCell.swift */,
 				469954F61EF93BB5008440A4 /* Main.storyboard */,
 				469954F91EF93BB5008440A4 /* Assets.xcassets */,
 				469954FB1EF93BB5008440A4 /* LaunchScreen.storyboard */,
 				469954FE1EF93BB5008440A4 /* Info.plist */,
-				469955201EF93CB3008440A4 /* IFCollectionViewCell.swift */,
+				4646C4FD1EFA532B001DA37E /* CardSwipeViewController.swift */,
+				4646C4FF1EFA53E2001DA37E /* SwipeCollectionViewCell.swift */,
 			);
 			path = InfiniteScrollCV;
 			sourceTree = "<group>";
@@ -262,9 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4646C4FA1EFA5301001DA37E /* TisprCardStackViewCell.swift in Sources */,
 				469955211EF93CB3008440A4 /* IFCollectionViewCell.swift in Sources */,
+				4646C4FE1EFA532B001DA37E /* CardSwipeViewController.swift in Sources */,
+				4646C4FC1EFA5301001DA37E /* TisprCardStackViewLayout.swift in Sources */,
 				469954F51EF93BB5008440A4 /* ViewController.swift in Sources */,
+				4646C4FB1EFA5301001DA37E /* TisprCardStackViewController.swift in Sources */,
 				469954F31EF93BB5008440A4 /* AppDelegate.swift in Sources */,
+				4646C5001EFA53E2001DA37E /* SwipeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +531,7 @@
 				469955191EF93BB5008440A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4699551A1EF93BB5008440A4 /* Build configuration list for PBXNativeTarget "InfiniteScrollCVTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +540,7 @@
 				4699551C1EF93BB5008440A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4699551D1EF93BB5008440A4 /* Build configuration list for PBXNativeTarget "InfiniteScrollCVUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +549,7 @@
 				4699551F1EF93BB5008440A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

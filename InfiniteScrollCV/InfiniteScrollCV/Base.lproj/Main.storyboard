@@ -64,7 +64,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Hi-bl-rUj" secondAttribute="bottom" id="u9U-Ra-d60"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SCK-xA-ikU"/>
+                    <navigationItem key="navigationItem" id="SCK-xA-ikU">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="ZuD-zF-WBa">
+                            <connections>
+                                <segue destination="ySg-Bc-fsc" kind="show" id="Vmf-Do-uTi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="2Hi-bl-rUj" id="BC7-Fa-zLN"/>
                     </connections>
@@ -72,6 +78,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1148" y="-561.76911544227892"/>
+        </scene>
+        <!--Card Swipe View Controller-->
+        <scene sceneID="UiR-a6-ndh">
+            <objects>
+                <collectionViewController id="ySg-Bc-fsc" customClass="CardSwipeViewController" customModule="InfiniteScrollCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="rW4-FV-zqn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="VGD-4E-Zod" customClass="TisprCardStackViewLayout" customModule="InfiniteScrollCV" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SwipeCollectionViewCell" id="1gn-BR-WJ1" customClass="SwipeCollectionViewCell" customModule="InfiniteScrollCV" customModuleProvider="target">
+                                <rect key="frame" x="39.5" y="0.0" width="296" height="485"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="296" height="485"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ckW-jA-bEF">
+                                            <rect key="frame" x="20" y="72" width="256" height="393"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIW-yx-4HA">
+                                            <rect key="frame" x="20" y="20" width="256" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="36x-tV-wPv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="rIW-yx-4HA" firstAttribute="leading" secondItem="1gn-BR-WJ1" secondAttribute="leading" constant="20" id="69d-uJ-X2D"/>
+                                    <constraint firstItem="ckW-jA-bEF" firstAttribute="top" secondItem="rIW-yx-4HA" secondAttribute="bottom" constant="8" id="KBx-dt-m1k"/>
+                                    <constraint firstItem="rIW-yx-4HA" firstAttribute="top" secondItem="1gn-BR-WJ1" secondAttribute="top" constant="20" id="PN4-RB-LoE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ckW-jA-bEF" secondAttribute="bottom" constant="20" id="Uur-QG-9oG"/>
+                                    <constraint firstItem="ckW-jA-bEF" firstAttribute="leading" secondItem="1gn-BR-WJ1" secondAttribute="leading" constant="20" id="Zpk-0i-rNJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rIW-yx-4HA" secondAttribute="trailing" constant="20" id="aUA-no-fRj"/>
+                                    <constraint firstAttribute="trailing" secondItem="ckW-jA-bEF" secondAttribute="trailing" constant="20" id="e8u-3b-ury"/>
+                                </constraints>
+                                <size key="customSize" width="296" height="485"/>
+                                <connections>
+                                    <outlet property="title" destination="rIW-yx-4HA" id="1RC-Hy-F2B"/>
+                                    <outlet property="voteSmile" destination="ckW-jA-bEF" id="A7G-Yg-nEU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ySg-Bc-fsc" id="BWp-dR-y2M"/>
+                            <outlet property="delegate" destination="ySg-Bc-fsc" id="zNl-JM-4il"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnf-Hn-rsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2117.5999999999999" y="-561.76911544227892"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="07R-fz-10H">

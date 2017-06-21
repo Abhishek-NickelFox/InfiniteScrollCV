@@ -35,14 +35,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Int(INT_MAX)//imgArray.count //Int.max // rather imgArray.count
+//        return Int(INT_MAX)
+        return imgArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IFCollectionViewCell", for: indexPath) as! IFCollectionViewCell
         
-        cell.configure(img: imgArray[indexPath.row % imgArray.count])
+//        cell.configure(img: imgArray[indexPath.row % imgArray.count])
+        
+        cell.configure(img: imgArray[indexPath.row])
         
         return cell
     }
