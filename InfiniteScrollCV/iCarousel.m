@@ -67,9 +67,9 @@
 #define FLOAT_ERROR_MARGIN 0.000001
 
 #ifdef ICAROUSEL_MACOS
-#define MAX_VISIBLE_ITEMS 50
+#define MAX_VISIBLE_ITEMS 4
 #else
-#define MAX_VISIBLE_ITEMS 30
+#define MAX_VISIBLE_ITEMS 4 // CHANGES
 #endif
 
 
@@ -146,7 +146,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     _perspective = -1.0/500.0;
     _contentOffset = CGSizeZero;
     _viewpointOffset = CGSizeZero;
-    _scrollSpeed = 1.0;
+    _scrollSpeed = 0.1;// CHANGES
     _bounceDistance = 1.0;
     _stopAtItemBoundary = YES;
     _scrollToItemBoundary = YES;
