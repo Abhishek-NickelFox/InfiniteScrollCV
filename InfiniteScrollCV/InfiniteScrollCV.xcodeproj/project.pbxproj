@@ -20,6 +20,8 @@
 		469955081EF93BB5008440A4 /* InfiniteScrollCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469955071EF93BB5008440A4 /* InfiniteScrollCVTests.swift */; };
 		469955131EF93BB5008440A4 /* InfiniteScrollCVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469955121EF93BB5008440A4 /* InfiniteScrollCVUITests.swift */; };
 		469955211EF93CB3008440A4 /* IFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469955201EF93CB3008440A4 /* IFCollectionViewCell.swift */; };
+		46A1467E1EFCEE7400563279 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A1467D1EFCEE7400563279 /* iCarousel.m */; };
+		46A146801EFCF03C00563279 /* TTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A1467F1EFCF03C00563279 /* TTViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		469955121EF93BB5008440A4 /* InfiniteScrollCVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollCVUITests.swift; sourceTree = "<group>"; };
 		469955141EF93BB5008440A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469955201EF93CB3008440A4 /* IFCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFCollectionViewCell.swift; sourceTree = "<group>"; };
+		46A1467B1EFCEE7400563279 /* InfiniteScrollCV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfiniteScrollCV-Bridging-Header.h"; sourceTree = "<group>"; };
+		46A1467C1EFCEE7400563279 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		46A1467D1EFCEE7400563279 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		46A1467F1EFCF03C00563279 /* TTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +95,13 @@
 		469954E61EF93BB5008440A4 = {
 			isa = PBXGroup;
 			children = (
+				46A1467C1EFCEE7400563279 /* iCarousel.h */,
+				46A1467D1EFCEE7400563279 /* iCarousel.m */,
 				469954F11EF93BB5008440A4 /* InfiniteScrollCV */,
 				469955061EF93BB5008440A4 /* InfiniteScrollCVTests */,
 				469955111EF93BB5008440A4 /* InfiniteScrollCVUITests */,
 				469954F01EF93BB5008440A4 /* Products */,
+				46A1467B1EFCEE7400563279 /* InfiniteScrollCV-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +130,7 @@
 				469954FE1EF93BB5008440A4 /* Info.plist */,
 				4646C4FD1EFA532B001DA37E /* CardSwipeViewController.swift */,
 				4646C4FF1EFA53E2001DA37E /* SwipeCollectionViewCell.swift */,
+				46A1467F1EFCF03C00563279 /* TTViewController.swift */,
 			);
 			path = InfiniteScrollCV;
 			sourceTree = "<group>";
@@ -212,6 +222,7 @@
 					469954EE1EF93BB5008440A4 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = NY45473NT8;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					469955021EF93BB5008440A4 = {
@@ -281,8 +292,10 @@
 				4646C4FA1EFA5301001DA37E /* TisprCardStackViewCell.swift in Sources */,
 				469955211EF93CB3008440A4 /* IFCollectionViewCell.swift in Sources */,
 				4646C4FE1EFA532B001DA37E /* CardSwipeViewController.swift in Sources */,
+				46A1467E1EFCEE7400563279 /* iCarousel.m in Sources */,
 				4646C4FC1EFA5301001DA37E /* TisprCardStackViewLayout.swift in Sources */,
 				469954F51EF93BB5008440A4 /* ViewController.swift in Sources */,
+				46A146801EFCF03C00563279 /* TTViewController.swift in Sources */,
 				4646C4FB1EFA5301001DA37E /* TisprCardStackViewController.swift in Sources */,
 				469954F31EF93BB5008440A4 /* AppDelegate.swift in Sources */,
 				4646C5001EFA53E2001DA37E /* SwipeCollectionViewCell.swift in Sources */,
@@ -439,11 +452,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = InfiniteScrollCV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.InfiniteScrollCV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfiniteScrollCV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -452,11 +468,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = InfiniteScrollCV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Marvel.InfiniteScrollCV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfiniteScrollCV-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

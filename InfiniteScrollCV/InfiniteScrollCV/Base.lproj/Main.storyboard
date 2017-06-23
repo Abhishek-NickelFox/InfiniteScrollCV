@@ -65,6 +65,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SCK-xA-ikU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="SfT-Wd-Q4v">
+                            <connections>
+                                <segue destination="g9R-Gj-o98" kind="show" id="en5-rW-AyS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="ZuD-zF-WBa">
                             <connections>
                                 <segue destination="ySg-Bc-fsc" kind="show" id="Vmf-Do-uTi"/>
@@ -83,7 +88,7 @@
         <scene sceneID="UiR-a6-ndh">
             <objects>
                 <collectionViewController id="ySg-Bc-fsc" customClass="CardSwipeViewController" customModule="InfiniteScrollCV" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="rW4-FV-zqn">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rW4-FV-zqn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,6 +158,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3m-gC-dA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="-560.86956521739137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KNq-Sr-4wD">
+            <objects>
+                <viewController id="g9R-Gj-o98" customClass="TTViewController" customModule="InfiniteScrollCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4PN-4F-pKF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Klo-w9-yZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ee-LG-gTg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWJ-yN-Ofe" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="207" width="375" height="253"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xWJ-yN-Ofe" secondAttribute="trailing" id="O4m-Dj-xkm"/>
+                            <constraint firstItem="Klo-w9-yZm" firstAttribute="top" secondItem="xWJ-yN-Ofe" secondAttribute="bottom" constant="207" id="clI-e2-8vA"/>
+                            <constraint firstItem="xWJ-yN-Ofe" firstAttribute="top" secondItem="4PN-4F-pKF" secondAttribute="bottom" constant="143" id="fgn-3U-Vtj"/>
+                            <constraint firstItem="xWJ-yN-Ofe" firstAttribute="leading" secondItem="8Ee-LG-gTg" secondAttribute="leading" id="xcB-gX-rfn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iCView" destination="xWJ-yN-Ofe" id="067-Qw-TdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMG-U4-jki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="160.56971514242881"/>
         </scene>
     </scenes>
 </document>
