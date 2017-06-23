@@ -19,6 +19,7 @@ class TTViewController: UIViewController, iCarouselDataSource, iCarouselDelegate
         iCView.delegate = self
         iCView.dataSource = self
         iCView.isVertical = true
+        iCView.scrollSpeed = 0.1
         iCView.type = iCarouselType(rawValue: 9)!
         
         // Do any additional setup after loading the view.
